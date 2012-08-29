@@ -11,7 +11,7 @@ module OAuth::RequestProxy
     end
 
     def uri
-      request.url
+      options[:uri] ? options[:uri].to_s : request.url
     end
 
     def parameters
